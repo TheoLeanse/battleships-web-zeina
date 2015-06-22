@@ -6,6 +6,11 @@ class BattleshipsWeb < Sinatra::Base
     erb :index
   end
 
+  get '/new_game' do
+    @name = params[:name]
+    erb :new_game
+  end
+
   # get '/new_game' do
   #
   # end
