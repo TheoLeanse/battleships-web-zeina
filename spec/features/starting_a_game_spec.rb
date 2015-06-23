@@ -9,9 +9,8 @@ feature 'Starting a new game' do
 
   scenario 'I can enter my name' do
     visit '/new_game'
-    fill_in 'Michael'
+    fill_in('name', with: '')
     click_on 'submit'
     expect(page).to have_content 'You are now registered!'
-
   end
 end
